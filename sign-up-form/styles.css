@@ -1,0 +1,206 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --- Actual styling --- */
+
+input:focus {
+    outline: none;
+    border: 1px solid sienna;
+    padding: 1.4px 2.3px;
+    box-shadow: 3px 3px 8px bisque;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid orangered;
+    outline: none;
+}
+
+.error + div::before {
+    content: "* Passwords do not match.";
+    color: orangered;
+}
+
+.error {
+    border: 1px solid orangered;
+    outline: none;
+}
+
+:root {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+}
+
+svg {
+    fill: white;
+    height: 10vh;
+}
+
+label {
+    display: block;
+    color: saddlebrown;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 20vw;
+    min-width: 250px;
+    font-size: 1.5rem;
+    margin-top: 0.5vh;
+    letter-spacing: 1px;
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+button {
+    margin: 3vh 3vw;
+    border-radius: 10px;
+    background-color: sienna;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1.5vh 3vw;
+    border: none;
+    box-shadow: 2px 2px 5px sandybrown;
+}
+
+button:hover {
+    background-color: maroon;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateX(2px) translateY(2px);
+}
+
+a {
+    text-decoration: none;
+    color: sienna;
+    font-weight: 700;
+}
+
+a:hover {
+    color: maroon;
+}
+
+footer {
+    text-align: center;
+    background-color: #411C13;
+    color: white;
+    padding: 3vh;
+}
+
+footer a {
+    color: bisque;
+}
+
+footer a:hover {
+    color: sandybrown;
+}
+
+.flex {
+    display: flex;
+    height: 100vh;
+}
+
+.imagetext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.imagecontainer {
+    background-image: url(https://rare-gallery.com/mocahbig/1376197-lofi-cafe-studying-art-4k-pc-wallpaper.jpg);
+    flex-basis: 70vw;
+}
+
+.formcontainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.introtext {
+    background-color: bisque;
+    padding: 20vh 3vw 5vh 3vw;
+    color: saddlebrown;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.form_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    padding: 3vh 3vw;
+    background-color: oldlace;
+    box-shadow: 2px 2px 5px sandybrown;
+}
+
+.form_inputs > div {
+    margin-right: 2vw;
+}
+
+.form {
+    background-color: bisque;
+}
+
+.login {
+    background-color: bisque;
+    flex-grow: 1;
+    padding: 1vh 3vw;
+}
+

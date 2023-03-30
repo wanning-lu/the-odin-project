@@ -1,0 +1,54 @@
+.display {
+    width: 60vw;
+    height: 10vh;
+    margin: auto;
+    background-color: #034f84;
+    color: white;
+    font-size: 8vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.display > div {
+    margin: 0 2%;
+}
+
+.calcbody {
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.calcbody > div {
+    flex-grow: 1;
+}
+
+.row {
+    display: flex;
+}
+
+.row > div {
+    background-color: #92a8d1;
+    color: white;
+    border: 2px solid #034f84;
+    font-size: 5vh;
+    flex-shrink: 1;
+    flex-grow: 1;
+    text-align: center;
+    flex-basis: 0;
+}
+
+.row > div:hover {
+    background-color: white;
+    color: #034f84;
+    cursor: pointer;
+}
+
+.row > div:active {
+    background-color: #034f84;
+    color: white;
+}

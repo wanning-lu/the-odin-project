@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Community Sign Up</title>
+</head>
+<body>
+    <div class="flex">
+        <div class="imagecontainer">
+            <div class="imagetext">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M442 814q-115 0-198.5-81.5T160 539V276q0-24 18-42t42-18h529q54.271 0 92.636 37Q880 290 880 344t-38.364 91Q803.271 472 749 472h-25v67q0 112-83.5 193.5T442 814ZM220 412h444V276H220v136Zm222 342q91 0 156.5-63.5T664 539v-67H220v67q0 88 65.5 151.5T442 754Zm282-342h25q29 0 50-19.5t21-48.5q0-29-21-48.5T749 276h-25v136ZM160 936v-60h634v60H160Zm282-464Z"/></svg>
+                <div>COZY CAFÉ</div>
+            </div>
+        </div>
+        <div class="formcontainer">
+            <div class="introtext">
+                <p>
+                    Want to join our cozy cafe community? By applying for membership, you're signing up for casual discussions about simple living,
+                    tea, and DIY projects. Sign up now to not only support your local business, but also be more involved with your local
+                    community! We look forward to seeing you.
+                </p>
+            </div>
+            <div class="form">
+                <form action="" method="post">
+                    <div class="form_inputs">
+                        <div>
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" name="first_name" id="first_name" placeholder="Joe" required autofocus>
+                        </div>
+
+                        <div>
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" name="last_name" for="last_name" placeholder="Urmi" required>
+                        </div>
+
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email" placeholder="JoeUrmi@example.com" required>
+                        </div>
+
+                        <div>
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="text" name="phone_number" id="phone_number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890" 
+                            oninvalid="setCustomValidity('Enter as: xxx-xxx-xxxx')" required>
+                        </div>
+
+                        <div>
+                            <label for="password">PASSWORD</label>
+                            <input class="error" type="password" name="password" id="password" required>
+                            <div class="error_message"></div>
+                        </div>
+
+                        <div>
+                            <label for="password_confirmation">CONFIRM PASSWORD</label>
+                            <input class="error" type="password" name="password_confirmation" id="password_confirmation" required>
+                        </div>
+                    </div>
+                    <button type="submit" value="Create Account">Create Account</button>
+                </form>
+            </div>
+            <div class="login">Already have an account? <a href="">Log in</a></div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Coffee Icon from <a href="https://fonts.google.com/icons">Material Icons</a></p>
+        <p>Cafe image from <a href="https://rare-gallery.com/1376197-lofi-cafe-studying-art-4k-pc-wallpaper.html">Rare Gallery</a></p>
+    </footer>
+
+</body>
+</html>

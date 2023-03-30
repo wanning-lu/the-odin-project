@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Life Dashboard</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-item icon" id="sidebar-main-icon" viewBox="0 0 24 24"><title>view-dashboard</title><path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>
+            <div class="sidebar-item text" id="sidebar-header">Dashboard</div>
+
+            <div class="emptycell sidebar-item"></div>
+            <div class="emptycell sidebar-item"></div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon1 sidebar-item icon" viewBox="0 0 24 24"><title>home</title><path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>
+            <div class="text1 sidebar-item text">Home</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon2 sidebar-item icon" viewBox="0 0 24 24"><title>heart</title><path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" /></svg>
+            <div class="text2 sidebar-item text">Relationships</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon3 sidebar-item icon" viewBox="0 0 24 24"><title>account</title><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
+            <div class="text3 sidebar-item text">Personality</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon4 sidebar-item icon" viewBox="0 0 24 24"><title>dice-3</title><path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M7,5A2,2 0 0,0 5,7A2,2 0 0,0 7,9A2,2 0 0,0 9,7A2,2 0 0,0 7,5M17,15A2,2 0 0,0 15,17A2,2 0 0,0 17,19A2,2 0 0,0 19,17A2,2 0 0,0 17,15Z" /></svg>
+            <div class="text4 sidebar-item text">Hobbies</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon5 sidebar-item icon" viewBox="0 0 24 24"><title>trophy-variant</title><path d="M17 4V2H7V4H2V11C2 12.1 2.9 13 4 13H7.1C7.5 14.96 9.04 16.5 11 16.9V19.08C8 19.54 8 22 8 22H16C16 22 16 19.54 13 19.08V16.9C14.96 16.5 16.5 14.96 16.9 13H20C21.1 13 22 12.1 22 11V4H17M4 11V6H7V11L4 11M20 11L17 11V6H20L20 11Z" /></svg>
+            <div class="text5 sidebar-item text">Goals</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon6 sidebar-item icon" viewBox="0 0 24 24"><title>cash</title><path d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" /></svg>
+            <div class="text6 sidebar-item text">Finances</div>
+            
+
+            <div class="emptycell sidebar-item"></div>
+            <div class="emptycell sidebar-item"></div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon7 sidebar-item icon" viewBox="0 0 24 24"><title>cog</title><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" /></svg>
+            <div class="text7 sidebar-item text">Settings</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon8 sidebar-item icon" viewBox="0 0 24 24"><title>comment-quote</title><path d="M20 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H8V21C8 21.6 8.4 22 9 22H9.5C9.7 22 10 21.9 10.2 21.7L13.9 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M11 13H7V8.8L8.3 6H10.3L8.9 9H11V13M17 13H13V8.8L14.3 6H16.3L14.9 9H17V13Z" /></svg>
+            <div class="text8 sidebar-item text">Feedback</div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon9 sidebar-item icon" viewBox="0 0 24 24"><title>logout</title><path d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>
+            <div class="text9 sidebar-item text">Log Out</div>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24"><title>magnify</title><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                <div class="search-bar header-item"></div>
+                <div class="emptycell header-item"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="notif-icon header-item" viewBox="0 0 24 24"><title>bell-ring-outline</title><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>
+                <div class="profile-pic header-item">
+                    <img src="profile.png">
+                </div>
+                <div class="profile-name header-item">Wanning Lu</div>
+            </div>
+            <div class="header-content">
+                <div class="profile-pic"></div>
+                <div class="greeting"><span>You are controlling</span><span>Sammy</span></div>
+                <button class="add-button">Add</button>
+                <button class="edit-button">Edit</button>
+                <button class="share-button">Share</button>
+            </div>
+            <div class="main-content">
+                <div class="goals">
+                    <div class="your-goals"></div>
+                    <div class="goal1">
+                        <div class="goal1-title"></div>
+                        <goal1-content></goal1-content>
+                        <div class="star-icon"></div>
+                        <div class="edit-icon"></div>
+                    </div>
+                    <div class="goal2">
+                        <div class="goal2-title"></div>
+                        <goal2-content></goal2-content>
+                        <div class="star-icon"></div>
+                        <div class="edit-icon"></div>
+                    </div>
+                    <div class="goal3">
+                        <div class="goal3-title"></div>
+                        <goal3-content></goal3-content>
+                        <div class="star-icon"></div>
+                        <div class="edit-icon"></div>
+                    </div>
+                    <div class="goal4">
+                        <div class="goal4-title"></div>
+                        <goal4-content></goal4-content>
+                        <div class="star-icon"></div>
+                        <div class="edit-icon"></div>
+                    </div>
+                    <div class="goal5">
+                        <div class="goal5-title"></div>
+                        <goal5-content></goal5-content>
+                        <div class="star-icon"></div>
+                        <div class="edit-icon"></div>
+                    </div>
+                    <div class="goal6">
+                        <div class="goal6-title"></div>
+                        <goal6-content></goal6-content>
+                        <div class="star-icon"></div>
+                        <div class="edit-icon"></div>
+                    </div>
+                </div>
+                <div class="add-info">
+                    <div class="major-events">Major Events</div>
+                    <div class="major-events-content">
+                        <div class="major-event1"></div>
+                        <div class="major-event2"></div>
+                        <div class="major-event3"></div>
+                    </div>
+                    <div class="connections">Connections</div>
+                    <div class="connections-content">
+                        <div class="connection1">
+                            <div class="connection-profile-pic"></div>
+                            <div class="connection-name"></div>
+                            <div class="connection-relation"></div>
+                        </div>
+                        <div class="connection2">
+                            <div class="connection-profile-pic"></div>
+                            <div class="connection-name"></div>
+                            <div class="connection-relation"></div>
+                        </div>
+                        <div class="connection3">
+                            <div class="connection-profile-pic"></div>
+                            <div class="connection-name"></div>
+                            <div class="connection-relation"></div>
+                        </div>
+                        <div class="connection4">
+                            <div class="connection-profile-pic"></div>
+                            <div class="connection-name"></div>
+                            <div class="connection-relation"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
