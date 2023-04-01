@@ -44,91 +44,154 @@
         </div>
 
         <div class="main">
-            <div class="header">
-                <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24"><title>magnify</title><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-                <div class="search-bar header-item"></div>
-                <div class="emptycell header-item"></div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="notif-icon header-item" viewBox="0 0 24 24"><title>bell-ring-outline</title><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>
-                <div class="profile-pic header-item">
-                    <img src="profile.png">
+            <div class="all-header">
+                <div class="header">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24"><title>magnify</title><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                    <div class="header-item" id="search-bar">
+                        <input type="text">
+                    </div>
+                    <div class="emptycell header-item"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="notif-icon header-item" viewBox="0 0 24 24"><title>bell-ring-outline</title><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>
+                    <div class="profile-pic header-item">
+                        <img src="profile.png">
+                    </div>
+                    <div class="profile-name header-item">Wanning Lu</div>
                 </div>
-                <div class="profile-name header-item">Wanning Lu</div>
-            </div>
-            <div class="header-content">
-                <div class="profile-pic"></div>
-                <div class="greeting"><span>You are controlling</span><span>Sammy</span></div>
-                <button class="add-button">Add</button>
-                <button class="edit-button">Edit</button>
-                <button class="share-button">Share</button>
+                <div class="header-content">
+                    <div class="profile-pic">
+                        <img src="profile.png">
+                    </div>
+                    <div class="greeting"><span id="control">You are controlling</span><spa id="sim_name">Sammy</span></div>
+                    <button class="add-button">Add</button>
+                    <button class="edit-button">Edit</button>
+                    <button class="share-button">Share</button>
+                </div>
             </div>
             <div class="main-content">
                 <div class="goals">
-                    <div class="your-goals"></div>
-                    <div class="goal1">
-                        <div class="goal1-title"></div>
-                        <goal1-content></goal1-content>
-                        <div class="star-icon"></div>
-                        <div class="edit-icon"></div>
+                    <div class="your-goals">Your Goals</div>
+                    <div class="goal1 goal">
+                        <div class="goal1-title goal-title">Promotion</div>
+                        <div class="goal1-content goal-content">
+                            Sammy wants to be promoted to a project manager! She's currently ensuring that she can secure the promotion 
+                            by refining her daily reports as well as showing tangible progress every day to her boss. 
+                        </div>
+                        <div class="goal-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-outline</title><path d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pencil-outline</title><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg>
+                        </div>
                     </div>
-                    <div class="goal2">
-                        <div class="goal2-title"></div>
-                        <goal2-content></goal2-content>
-                        <div class="star-icon"></div>
-                        <div class="edit-icon"></div>
+                    <div class="goal2 goal">
+                        <div class="goal2-title goal-title">Work Out</div>
+                        <div class="goal2-content goal-content">
+                            Sammy doesn't feel like she's in the best shape or health right now. She's planning on doing a moderate amount
+                            of exercise every day to improve it.
+                        </div>
+                        <div class="goal-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-outline</title><path d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pencil-outline</title><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg>
+                        </div>
                     </div>
-                    <div class="goal3">
-                        <div class="goal3-title"></div>
-                        <goal3-content></goal3-content>
-                        <div class="star-icon"></div>
-                        <div class="edit-icon"></div>
+                    <div class="goal3 goal">
+                        <div class="goal3-title goal-title">Propose</div>
+                        <div class="goal3-content goal-content">
+                            Sammy's reaching a very exciting time of her life! She wants to propose to her current girlfriend at the place
+                            where they first met: the hidden study spot at their college.
+                        </div>
+                        <div class="goal-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-outline</title><path d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pencil-outline</title><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg>
+                        </div>
                     </div>
-                    <div class="goal4">
-                        <div class="goal4-title"></div>
-                        <goal4-content></goal4-content>
-                        <div class="star-icon"></div>
-                        <div class="edit-icon"></div>
+                    <div class="goal4 goal">
+                        <div class="goal4-title goal-title">Reach A V2</div>
+                        <div class="goal4-content goal-content">
+                            Sammy has been thinking of starting rock climbing back up again, after taking it up in high school. To motivate her
+                            to climb again, she's going to try to send a V2!
+                        </div>
+                        <div class="goal-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-outline</title><path d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pencil-outline</title><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg>
+                        </div>
                     </div>
-                    <div class="goal5">
-                        <div class="goal5-title"></div>
-                        <goal5-content></goal5-content>
-                        <div class="star-icon"></div>
-                        <div class="edit-icon"></div>
+                    <div class="goal5 goal">
+                        <div class="goal5-title goal-title">Save $500</div>
+                        <div class="goal5-content goal-content">
+                            Sammy's been worried about not having enough for a rainy day recently, so to feel some more stability, she'd like
+                            to save enough from her job to cover herself.
+                        </div>
+                        <div class="goal-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-outline</title><path d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pencil-outline</title><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg>
+                        </div>
                     </div>
-                    <div class="goal6">
-                        <div class="goal6-title"></div>
-                        <goal6-content></goal6-content>
-                        <div class="star-icon"></div>
-                        <div class="edit-icon"></div>
+                    <div class="goal6 goal">
+                        <div class="goal6-title goal-title">Go to Korea</div>
+                        <div class="goal6-content goal-content">
+                            Sammy is in quite the need of a vacation; it's been a long time since she's been able to visit her hometown,
+                            so it would be nice to go back to a place of nostalgia and childhood.
+                        </div>
+                        <div class="goal-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-outline</title><path d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pencil-outline</title><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg>
+                        </div>
                     </div>
                 </div>
                 <div class="add-info">
                     <div class="major-events">Major Events</div>
                     <div class="major-events-content">
-                        <div class="major-event1"></div>
-                        <div class="major-event2"></div>
-                        <div class="major-event3"></div>
+                        <div class="major-event1 major-event">
+                            <span class="major-event-title">Hired</span>
+                            <span class="major-event-content">
+                                Sammy was hired to a decent company, albeit not her dream company. She's made a good impression so far
+                                and she feels decently passionate about her work!
+                            </span>
+                        </div>
+                        <div class="major-event2 major-event">
+                            <span class="major-event-title">Graduation</span>
+                            <span class="major-event-content">
+                                Sammy graduated her college with a bachelor's degree in neuroscience in 4 years. However, she is thinking about
+                                going more into the CS field for more flexibility.
+                            </span>
+                        </div>
+                        <div class="major-event3 major-event">
+                            <span class="major-event-title">Dating!</span>
+                            <span class="major-event-content">
+                                Sammy is now with her girlfriend, Emmy! This is her first partner and she feels quite excited and hopeful.
+                                Everything seems to be going well.
+                            </span>
+                        </div>
                     </div>
                     <div class="connections">Connections</div>
                     <div class="connections-content">
-                        <div class="connection1">
-                            <div class="connection-profile-pic"></div>
-                            <div class="connection-name"></div>
-                            <div class="connection-relation"></div>
-                        </div>
-                        <div class="connection2">
-                            <div class="connection-profile-pic"></div>
-                            <div class="connection-name"></div>
-                            <div class="connection-relation"></div>
-                        </div>
-                        <div class="connection3">
-                            <div class="connection-profile-pic"></div>
-                            <div class="connection-name"></div>
-                            <div class="connection-relation"></div>
-                        </div>
-                        <div class="connection4">
-                            <div class="connection-profile-pic"></div>
-                            <div class="connection-name"></div>
-                            <div class="connection-relation"></div>
+                            <div class="connection-profile-pic">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="">
+                            </div>
+                            <div class="connection-info">
+                                <div class="connection-name">Emmy</div>
+                                <div class="connection-relation">Partner</div>
+                            </div>
+                            <div class="connection-profile-pic">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="">
+                            </div>
+                            <div class="connection-info">
+                                <div class="connection-name">Sam</div>
+                                <div class="connection-relation">Best Friend</div>
+                            </div>
+                            <div class="connection-profile-pic">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="">
+                            </div>
+                            <div class="connection-info">
+                                <div class="connection-name">Sarah</div>
+                                <div class="connection-relation">Friend</div>
+                            </div>
+                            <div class="connection-profile-pic">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="">
+                            </div>
+                            <div class="connection-info">
+                                <div class="connection-name">Meghan</div>
+                                <div class="connection-relation">Mentor</div>
+                            </div>
                         </div>
                     </div>
                 </div>

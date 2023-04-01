@@ -108,7 +108,7 @@ table {
 .main {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1.5fr 10fr;
+    grid-template-rows: 2.5fr 10fr;
 }
 
 /* --- Header --- */
@@ -132,9 +132,7 @@ table {
     object-fit: cover;
     width: 75%;
     max-height: 75%;
-    justify-content: center;
-    border: var(--test-border);
-  }
+}
 
 .search-icon {
     height: 30%;
@@ -150,13 +148,31 @@ table {
     font-weight: bold;
 }
 
+#search-bar {
+    justify-self: left;
+    height: 50%;
+    width: 100%;
+}
+
+#search-bar > input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 40px;
+    background-color: whitesmoke;
+}
+
+.all-header {
+    box-shadow: 0px 17px 34px -19px rgba(0,0,0,0.33);
+}
+
 .header {
     display: grid;
     grid-template-columns: 1fr 10fr 3fr 1fr 1fr 2fr;
+    
 }
 
 .header-content {
-    padding-top: 2%;
     display: grid;
     grid-template-columns: 1fr 7fr 1.5fr 1.5fr 1.5fr;
 }
@@ -165,34 +181,150 @@ table {
     display: block;
 }
 
+#control {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.greeting {
+    justify-self: left;
+}
+
+.header-content > button {
+    background-color: var(--dark);
+    color: var(--dark-text);
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    height: 60%;
+    width: 70%;
+    border-radius: 30px;
+}
+
+#sim_name {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/* --- Dashboard content --- */
 .main-content {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    padding: 3% 0 5% 0;
-    
+    grid-template-columns: 3fr 1.25fr;
+    padding: 2% 2% 5% 2%;
+    gap: 2vw;
+    background-color: whitesmoke;
 }
 
 .goals {
     display: grid;
     grid-template: 1fr 5fr 5fr 5fr / 1fr 1fr;
+    gap: 1vw;
 }
 
 .your-goals {
     grid-column: 1 / 3;
+    font-size: 2rem;
+    align-self: end;
+}
+
+.goal {
+    box-shadow: inset 35px 1px 0px -22px var(--light), 3px 3px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 2vh 1vw 2vh 2vw;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 5px;
+    background-color: white;
+}
+
+.goal-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    align-self: end;
+}
+
+.goal-content {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.goal-icons {
+    align-self: center;
+    text-align: end;
+}
+
+.goal-icons > svg {
+    margin: 0 1vh;
+    width: 5%;
+    height: 5%;
 }
 
 .add-info {
     display: grid;
     grid-template-rows: 1fr 7fr 1.5fr 6.5fr;
+    gap: 15px;
 }
 
-/* For seeing the styling more clearly */
-
-.sidebar {
-    border: var(--test-border);
+.major-events {
+    font-size: 2rem;
+    align-self: end;
 }
 
-.header > div, .header-content > div, .goals > div, .add-info > div {
-    border: var(--test-border);
+.major-events-content {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    display: grid;
 }
 
+.major-event {
+    margin: 0 1.5vw;
+    margin-top: 1.5vh;
+}
+
+.major-event-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.major-event-content {
+    display: block;
+    font-size: 1.25rem;
+    color: gray;
+}
+
+.major-event1, .major-event2 {
+    border-bottom: 1px solid gray;
+}
+
+.connections {
+    font-size: 2rem;
+    align-self: end;
+}
+
+.connections-content {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    padding: 1vh 1.5vw;
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 5fr;
+}
+
+.connections-content > div > img {
+    display: block;
+    object-fit: cover;
+    width: 80%;
+}
+
+.connection-profile-pic {
+    justify-self: center;
+    align-self: center;
+}
+
+.connection-info {
+    align-self: center;
+    font-size: 1.25rem;
+}
