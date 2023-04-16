@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="add-book-container">
+        <div class="add-book-form" style="display: none">
+            <form action="" class="book-form">
+                <fieldset>
+                    <input type="text" name="title" placeholder="Title" id="title" required>
+                    <input type="text" name="author" placeholder="Author" id="author" required>
+                    <input type="number" name="pages" placeholder="Pages" id="pages" required>
+                    <input type="text" name="genre" placeholder="Genre" id="genre" required>
+                    <input type="url" name="cover" placeholder="Image URL" id="cover">
+                </fieldset>
+                <fieldset>
+                    <button class="cancel">Cancel</button>
+                    <button class="submit" type="submit">Submit</button>
+                </fieldset>
+                
+            </form>
+        </div>
+        <button class="add-book-button">Add book</button>
+    </div>
+    <div class="library-container">
+        
+    </div>
+</body>
+</html>
