@@ -15,47 +15,73 @@ let book2 = new Book("Project Hail Mary", "Andy Weir", 496,
 
 let myLibrary = [book1, book2];
 
-function appendBook(book) {
+function appendBook(book, index) {
+    // Create general book container (allows for flex styling)
     let bookContainer = document.createElement('div');
     bookContainer.classList.add("book-container");
+    bookContainer.setAttribute('id', index)
 
+    // Separate container for image / content
     let cardContainer = document.createElement('div');
-    cardContainer.classList.add("class-container");
-
+    cardContainer.classList.add("content-container");
     let imageContainer = document.createElement('div');
     imageContainer.classList.add("image-container");
 
-    let title = document.createElement('h2');
+    // Container for title and author
+    let info1 = document.createElement('div');
+    info1.classList.add("info1")
+    let title = document.createElement('span');
     title.innerHTML = book.title;
+    title.style.fontWeight = "bold";
+    let author = document.createElement('span');
+    author.innerHTML = " by " + book.author;
+    info1.append(title, author)
 
-    let author = document.createElement('p');
-    author.innerHTML = "by " + book.author;
-
-    let pages = document.createElement('p');
-    pages.innerHTML = book.pages;
-
-    let genre = document.createElement('p');
+    // Container for pages and genre
+    let info2 = document.createElement('div');
+    info2.classList.add("info2")
+    let pages = document.createElement('span');
+    pages.innerHTML = book.pages + " pgs • ";
+    let genre = document.createElement('span');
     genre.innerHTML = book.genre;
+    info2.style.color = "darkgray";
+    info2.style.fontSize = "0.75rem";
+    info2.append(pages, genre);
 
-    cardContainer.append(title, author, pages, genre);
-
+    // Container for the cover
     let cover = document.createElement('img');
     cover.src = book.cover;
-
     imageContainer.append(cover);
 
+    // Container for the read and delete buttons
+    let buttons = document.createElement('div');
+    buttons.classList.add("button-container")
+    let deleteButton = document.createElement('button');
+    deleteButton.classList.add("classic-button", "delete");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.addEventListener('click', deleteBook);
+    let readButton = document.createElement('button');
+    readButton.classList.add("classic-button", "read");
+    readButton.innerHTML = "Read";
+    buttons.append(deleteButton, readButton);
+
+    cardContainer.append(info1, info2, buttons);
+
+    // Add everything to the DOM
     bookContainer.append(imageContainer, cardContainer)
     document.querySelector(".library-container").append(bookContainer);
+
 }
 
 // Keep updating the browser with the objects inside myLibrary
 function updateLibrary(addedBook) {
     if (addedBook) {
         recentBook = myLibrary[myLibrary.length - 1];
-        appendBook(recentBook);
+        appendBook(recentBook, myLibrary.length - 1);
     } else {
+        document.querySelector('.library-container').innerHTML = "";
         myLibrary.forEach(book => {
-        appendBook(book);
+            appendBook(book, myLibrary.indexOf(book));
     })
     }
 }
@@ -66,6 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector(".book-form").addEventListener('submit', addBookToLibrary);
     updateLibrary(false);
 });
+
+// Delete a book from the array
+function deleteBook() {
+    let index = parseInt(event.target.parentElement.parentElement.parentElement.getAttribute('id'));
+    myLibrary.splice(index, 1);
+    updateLibrary(false);
+}
 
 // Display the "add new book" form when the button is pressed
 function showForm() {
