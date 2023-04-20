@@ -15,31 +15,42 @@ let book2 = new Book("Project Hail Mary", "Andy Weir", 496,
 
 let myLibrary = [book1, book2];
 
+// Update the library when the webpage is loaded as well as set up the form
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector(".add-book-button").addEventListener('click', showForm);
+    document.querySelector(".cancel").addEventListener('click', showForm);
+    document.querySelector(".book-form").addEventListener('submit', addBookToLibrary);
+    updateLibrary(false);
+});
+
+// Add a book to the current library/viewing
 function appendBook(book, index) {
     // Create general book container (allows for flex styling)
     let bookContainer = document.createElement('div');
     bookContainer.classList.add("book-container");
-    bookContainer.setAttribute('id', index)
+    bookContainer.setAttribute('id', index);
 
     // Separate container for image / content
     let cardContainer = document.createElement('div');
     cardContainer.classList.add("content-container");
     let imageContainer = document.createElement('div');
     imageContainer.classList.add("image-container");
+    imageContainer.innerHTML += `<svg class='unread-indicator' svg-id="${index}" viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='50' /></svg>`;
+
 
     // Container for title and author
     let info1 = document.createElement('div');
-    info1.classList.add("info1")
+    info1.classList.add("info1");
     let title = document.createElement('span');
     title.innerHTML = book.title;
     title.style.fontWeight = "bold";
     let author = document.createElement('span');
     author.innerHTML = " by " + book.author;
-    info1.append(title, author)
+    info1.append(title, author);
 
     // Container for pages and genre
     let info2 = document.createElement('div');
-    info2.classList.add("info2")
+    info2.classList.add("info2");
     let pages = document.createElement('span');
     pages.innerHTML = book.pages + " pgs • ";
     let genre = document.createElement('span');
@@ -55,7 +66,7 @@ function appendBook(book, index) {
 
     // Container for the read and delete buttons
     let buttons = document.createElement('div');
-    buttons.classList.add("button-container")
+    buttons.classList.add("button-container");
     let deleteButton = document.createElement('button');
     deleteButton.classList.add("classic-button", "delete");
     deleteButton.innerHTML = "Delete";
@@ -63,22 +74,27 @@ function appendBook(book, index) {
     let readButton = document.createElement('button');
     readButton.classList.add("classic-button", "read");
     readButton.innerHTML = "Read";
+    readButton.addEventListener('click', readBook);
     buttons.append(deleteButton, readButton);
 
     cardContainer.append(info1, info2, buttons);
 
     // Add everything to the DOM
-    bookContainer.append(imageContainer, cardContainer)
+    bookContainer.append(imageContainer, cardContainer);
     document.querySelector(".library-container").append(bookContainer);
 
 }
 
 // Keep updating the browser with the objects inside myLibrary
 function updateLibrary(addedBook) {
+    // Add only the most recently added book
     if (addedBook) {
         recentBook = myLibrary[myLibrary.length - 1];
         appendBook(recentBook, myLibrary.length - 1);
-    } else {
+    } 
+
+    // Otherwise, refresh the entire library
+    else {
         document.querySelector('.library-container').innerHTML = "";
         myLibrary.forEach(book => {
             appendBook(book, myLibrary.indexOf(book));
@@ -86,18 +102,27 @@ function updateLibrary(addedBook) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector(".add-book-button").addEventListener('click', showForm);
-    document.querySelector(".cancel").addEventListener('click', showForm);
-    document.querySelector(".book-form").addEventListener('submit', addBookToLibrary);
-    updateLibrary(false);
-});
-
 // Delete a book from the array
 function deleteBook() {
     let index = parseInt(event.target.parentElement.parentElement.parentElement.getAttribute('id'));
     myLibrary.splice(index, 1);
     updateLibrary(false);
+}
+
+// Modify the read indicator depending on the current state of the book
+function readBook() {
+    let id = parseInt(event.target.parentElement.parentElement.parentElement.getAttribute('id'));
+    if (event.target.innerHTML === "Read") {
+        readSvg = document.querySelector(`[svg-id="${id}"]`);
+        readSvg.classList.remove('unread-indicator');
+        readSvg.classList.add('read-indicator');
+        event.target.innerHTML = "Unread";
+    } else if (event.target.innerHTML === "Unread") {
+        readSvg = document.querySelector(`[svg-id="${id}"]`);
+        readSvg.classList.remove('read-indicator');
+        readSvg.classList.add('unread-indicator');
+        event.target.innerHTML = "Read";
+    }
 }
 
 // Display the "add new book" form when the button is pressed

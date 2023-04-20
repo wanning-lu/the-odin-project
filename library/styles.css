@@ -167,6 +167,7 @@ form {
     width: 10vw;
     padding: 5px;
     display: flex;
+    position: relative;
 }
 
 .image-container {
@@ -189,4 +190,20 @@ form {
 .book-container img {
     width: auto;
     height: 100%;
+}
+
+.unread-indicator {
+    position: absolute;
+    height: 10%;
+    top: 10px;
+    left: 10px;
+    fill: tomato;
+}
+
+.read-indicator {
+    position: absolute;
+    height: 10%;
+    top: 10px;
+    left: 10px;
+    fill: mediumaquamarine;
 }
