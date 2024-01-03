@@ -1,5 +1,7 @@
 import './style.css';
 import {home} from './home.js';
+import {menu} from './menu.js';
+import {contact} from './contact.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -10,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     menuTab.textContent = "Menu";
     let contactTab = document.createElement('div');
     contactTab.textContent = "Contact";
+
+    homeTab.addEventListener('click', home);
+    menuTab.addEventListener('click', menu);
+    contactTab.addEventListener('click', contact);
 
     navbar.append(homeTab, menuTab, contactTab);
 
@@ -22,12 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     tabMain.classList.add('tab-main');
     tabContent.append(tabHeading, tabMain);
 
-    homeTab.addEventListener('click', home);
-    // menuTab.addEventListener('click', menu);
-    // contact.addEventListener('click', contact);
-
     let footer = document.createElement('footer');
     footer.textContent = "Background image 'Bliss' from Windows";
     document.querySelector('#content').append(navbar, tabContent, footer);
+
+    // by default, load the home page
     home();
 })

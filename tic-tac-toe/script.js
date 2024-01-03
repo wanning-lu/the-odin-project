@@ -14,7 +14,6 @@ function Gameboard() {
         }
     }
 
-
     const getBoard = () => board;
 
     // Check if board has no empty cells
@@ -126,7 +125,6 @@ function GameController(playerOneName = "Player One",
         if (canContinue) {
             board.printBoard(true, getActivePlayer().name);
         } else {
-            console.log('ok');
             board.printBoard(false, playerWon);
         }
     };

@@ -59,7 +59,7 @@ nav {
     height: 50px;
     padding-top: 20px;
     gap: 20px;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 nav > * {
@@ -74,13 +74,15 @@ nav > * {
     justify-content: center;
     align-items: center;
     
-    background-color: gainsboro;
+    background-color: whitesmoke;
 
     font-weight: bold;
 }
 
 footer {
     margin-top: auto;
+    padding: 1vh auto;
+    background-color: whitesmoke;
 }
 
 .tab-content {
